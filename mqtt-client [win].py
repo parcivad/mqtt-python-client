@@ -65,9 +65,11 @@ while(True):
             # start traffic menu
             option = sendoption("Traffic", ["unsubscribe", "subscribe", "publish", "list", "exit"])
             if option == "publish":
-                # get some publish options
-                topic = input("| Publish topic: ")
-                payload = input("| Publish payload: ")
+                # build message
+                print("\n « Outgoing Message")
+                topic = input(" | Topic: ")
+                payload = input(" | Payload: ")
+                print(" » Send Message \n")
                 # send publish
                 client.publish(topic, payload)
             elif option == "subscribe":
